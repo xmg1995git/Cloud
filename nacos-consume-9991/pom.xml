@@ -43,7 +43,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-loadbalancer</artifactId>
         </dependency>
-
+        <!--  SpringCloud alibaba sentinel    -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
         <!--  SpringCloud alibaba nacos    -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
