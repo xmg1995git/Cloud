@@ -1,0 +1,24 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.mtf.mapper.UserMapper">
+    <insert id="saveUser" parameterType="org.mtf.entities.User">
+        insert into t_user (user_id, user_name) values (#{id}, #{name});
+    </insert>
+
+    <select id="userTotalByXml" resultType="java.lang.Long">
+        select count(1) from t_user;
+    </select>
+
+
+    <resultMap id="userResultMap" type="org.mtf.entities.User">
+        <id column="user_id" property="id"></id>
+        <result column="user_name" property="name"></result>
+    </resultMap>
+    <select id="getUserById" resultMap="userResultMap">
+        select * from t_user where user_id = #{id};
+    </select>
+
+
+</mapper>

@@ -1,0 +1,35 @@
+server:
+  port: 9001
+
+
+spring:
+  application:
+    name: consume-9001
+
+  cloud:
+    zookeeper:
+      connect-string: 127.0.0.1:2181
+
+
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
+
+
+
+logging:
+  level:
+    org.mtf.service.TestFeignService: debug
+    org.mtf.feignApi.TestApi: debug
+
+feign:
+  hystrix:
+    enabled: true
+
+  client:
+    config:
+      default: # 这里用default就是全局配置，如果是写服务名称，则是针对某个微服务的配置
+        loggerLevel: FULL #  日志级别
+
+
+
