@@ -28,6 +28,10 @@
             <artifactId>feign-api</artifactId>
             <version>${version}</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-zipkin</artifactId>-->
+<!--        </dependency>-->
         <!-- Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.-->
         <dependency>
             <groupId>com.github.ben-manes.caffeine</groupId>

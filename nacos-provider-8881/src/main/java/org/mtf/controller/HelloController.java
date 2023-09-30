@@ -14,7 +14,8 @@ public class HelloController {
 
     @GetMapping("/nacos/hello/{message}")
     public String hello(@PathVariable("message") String message){
-        return port + "-" +message;
+        int i = Integer.parseInt(message);
+        return port + "-" +i;
     }
 
 

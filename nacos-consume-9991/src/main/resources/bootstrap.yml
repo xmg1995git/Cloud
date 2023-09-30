@@ -27,6 +27,16 @@ spring:
     password: mysqlroot
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      # 采样值介于0-1之间，1，表示全部采集
+      probability: 1
+
+
 
 nacos-server:
   nacos-provider-888: http://nacos-provider-888
